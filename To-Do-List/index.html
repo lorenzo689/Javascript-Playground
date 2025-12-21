@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To-Do-List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h1><span>Dash</span>board</h1></a>
+
+           
+            <div class="navbar-center">
+                 <div class="search-box">
+                <input type="text" placeholder="Search your tasks here">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyi_CVTmoL1ITHFxQkfLwvj93hcsgA1Olkhg&s">
+                </div>
+            </div>
+
+            </div>
+
+            <div class="navbar-right">
+                <h2 class="day">Tuesday</h2>
+                <h3 class="date">25.11.2025</h3>
+            </div>
+        </nav>
+
+<!---------------------------------- Left Sidebar ----------------------------------------------->
+
+<div class="container">
+
+    <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+            
+            <div class="sidebar-profile-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+                <h2>Lorenzo Negri</h2>
+                <h3>lorenzonegri2006@gmail.com</h3>
+            </div>
+        </div>
+
+        <div class="sidebar-activity">
+            <div class="wrapper-box"><a href="index.html" class="active-link"><img src="https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-dashboard-line-icon-vector-png-image_6626604.png"><p>Dashboard</p></a></div>
+            <div class="wrapper-box"><a href="#"><img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/social/vital-signs-8nm09wxw758lno0vz7sy7.png/vital-signs-ydj1zwku2qnrrg3t8aw5sa.png?_a=DATAg1AAZAA0"><p>Vital Task</p></a></div>
+            <div class="wrapper-box"><a href="#"><img src="https://www.freeiconspng.com/uploads/tasks-icon-30.png"><p>My Task</p></a></div>
+            <div class="wrapper-box"><a href="#"><img src="https://www.svgrepo.com/show/11307/task-list.svg"><p>Task Categories</p></a></div>
+            <div class="wrapper-box"><a href="#"><img src="https://www.iconpacks.net/icons/2/free-settings-icon-3110-thumb.png"><p>Settings</p></a></div>
+            <div class="wrapper-box"><a href="#"><img src="https://icons.veryicon.com/png/o/miscellaneous/flat-icon/help-252.png"><p>Help</p></a></div>
+            <div class="wrapper-box-logout"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" class="logout-pic"><p>Logout</p></a></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="greeting">
+            <h2>Welcome Back Lorenzo 👋</h2>
+        </div>
+
+       <div class="to-do-section">
+
+            <div class="upper-section">
+                <h2>To-Do List</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1560.png">
+            </div>
+
+            <div class="add-box">
+                <input type="text" id="input" placeholder="Add your task">
+                <button type="submit" id="button">Add</button>
+            </div>
+
+            <div class="todo-items">
+                <div class="todo-item">
+                    <input type="checkbox"><p>Design Dashboard Layout</p><span>X</span>
+                </div>
+
+                <div class="todo-item">
+                    <input type="checkbox"><p>Fix Navbar Hover</p><span>X</span>
+                </div>
+
+                <div class="todo-item">
+                    <input type="checkbox"><p>Create Sidebar Animation</p><span>X</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
