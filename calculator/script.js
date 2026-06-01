@@ -1,84 +1,87 @@
-let currentInput = '';
-let previousInput = '';
-let currentOperation = '';
+let previousInput = ''
+let currentOperation = ''
+let currentInput = ''
+
+const display = document.getElementById("display")
 
 function appendNumber(number) {
-    currentInput += number;
-    updateDisplay();
+    currentInput += number
+    updateDisplay()
 }
 
 function appendOperation(operation) {
-    if (currentInput === '') return;
+    if (currentInput === '') return 
 
-    if (previousInput !== '') {
-        calculate();
+    if (currentInput !== '') {
+        calculate()
     }
 
-    currentOperation = operation;
-    previousInput = currentInput;
-    currentInput = '';
-    updateDisplay();
+    currentOperation = operation
+    previousInput = currentInput
+    currentInput = ''
+    updateDisplay() 
 }
 
 function calculate() {
-    if (previousInput === '' || currentInput === '') return;
+    if (previousInput === '' || currentInput === '') return 
 
-    const prev = parseFloat(previousInput);
-    const curr = parseFloat(currentInput);
-    let result;
+    const prev = parseFloat(previousInput)
+    const curr = parseFloat(currentInput)
 
-    switch (currentOperation) {
+    let result
+
+    switch(currentOperation) {
         case '+':
-            result = prev + curr;
-            break;
+            result = prev + curr 
+            break 
         case '-':
-            result = prev - curr;
-            break;
+            result = prev - curr 
+            break 
         case '*':
-            result = prev * curr;
-            break;
+            result = prev * curr 
+            break 
         case '/':
             if (curr === 0) {
-                clearDisplay();
-                document.getElementById('display').textContent = 'Error';
-                return;
+                clearDisplay()
+                display.textContent = `Error`
+                return
             }
-            result = prev / curr;
-            break;
-        default:
-            return;
+
+            result = prev / curr 
+            break 
+        default: 
+            return 
     }
 
-    currentInput = result.toString();
-    previousInput = '';
-    currentOperation = '';
-    updateDisplay();
+    currentInput = result.toString()
+    currentOperation = '' 
+    previousInput = ''
+    updateDisplay()
 }
 
 function clearDisplay() {
-    currentInput = '';
-    previousInput = '';
-    currentOperation = '';
-    updateDisplay();
+    previousInput = ''
+    currentOperation = ''
+    currentInput = ''
+    updateDisplay()
 }
 
 function deleteLast() {
-    currentInput = currentInput.slice(0, -1);
-    updateDisplay();
+    currentInput = currentInput.slice(0, -1)
+    updateDisplay()
 }
 
 function appendDecimal() {
-    if (currentInput.includes('.')) return;
-    currentInput = currentInput === '' ? '0.' : currentInput + '.';
-    updateDisplay();
+    if (currentInput.includes(".")) return 
+
+    currentInput = currentInput === '' ? '0.' : currentInput + ''
 }
 
 function updateDisplay() {
-    const display = document.getElementById('display');
-    const text =
-        (previousInput ? previousInput + ' ' : '') +
-        (currentOperation ? currentOperation + ' ' : '') +
-        (currentInput ? currentInput : '');
+    const text = 
+    (previousInput ? previousInput + '' : '') +
+    (currentOperation ? currentOperation + '' : '') +
+    (currentInput ? currentInput + '' : '')
 
-    display.textContent = text || '0';
+    display.textContent = text || '0' 
 }
