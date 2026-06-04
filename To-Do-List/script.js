@@ -1,13 +1,9 @@
-// Tasks mit rotem X entfernen
-
 let deletebuttons = document.querySelector(".todo-items"); 
 
 deletebuttons.addEventListener("click", function (event) {
     let redbutton = event.target.closest(".todo-item");
     redbutton.remove(); 
 });
-
-// Tasks hinzufügen 
 
 const addButton = document.getElementById("button");
 const input = document.getElementById("input");
@@ -38,8 +34,6 @@ addButton.addEventListener("click", () => {
   input.value = "";
 });
 
-// Dauerhafte Anzeige auf welcher Seite man ist
-
 const navlinks = document.querySelectorAll(".wrapper-box a"); 
 
 for (let j = 0; j < navlinks.length; j++) {
@@ -55,8 +49,6 @@ for (let j = 0; j < navlinks.length; j++) {
     })
 
 }
-
-// Aktuelles Datum und Wochentag ziehen
 
 const heute = new Date();
 
